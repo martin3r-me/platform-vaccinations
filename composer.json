@@ -1,0 +1,28 @@
+{
+    "name": "martin3r/platform-vaccinations",
+    "description": "Impfungen-Katalog für Platform — frei pflegbarer Impfstoff-/Impfleistungs-Katalog, referenziert von erbrachten Leistungen (encounter Service, morphMap 'vaccination').",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Platform Team",
+            "email": "team@platform.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Platform\\Vaccinations\\": "src/",
+            "Platform\\Vaccinations\\Database\\": "database/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Platform\\Vaccinations\\VaccinationsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
