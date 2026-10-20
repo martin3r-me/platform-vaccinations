@@ -3,7 +3,6 @@
 namespace Platform\Vaccinations;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Livewire\Livewire;
 use Platform\Core\PlatformCore;
@@ -29,7 +28,7 @@ class VaccinationsServiceProvider extends ServiceProvider
         if (
             config()->has('vaccinations.routing') &&
             config()->has('vaccinations.navigation') &&
-            Schema::hasTable('modules')
+            PlatformCore::modulesTableExists()
         ) {
             PlatformCore::registerModule([
                 'key'        => 'vaccinations',
